@@ -1,0 +1,22 @@
+{
+    "name": "raicem/public-reddit-wrapper",
+    "description": "A simple wrapper for Reddit's public API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cem Ünalan",
+            "email": "unalancem@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "RedditWrapper\\": "src",
+            "Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.3"
+    }
+}
