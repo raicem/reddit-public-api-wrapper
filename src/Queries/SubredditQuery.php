@@ -25,6 +25,9 @@ class SubredditQuery extends Query implements QueryInterface
      */
     private $sortTime;
 
+    /**
+     * Array of options must contain a subreddit value.
+     */
     public function __construct(array $options)
     {
         $this->validate($options);
@@ -40,6 +43,9 @@ class SubredditQuery extends Query implements QueryInterface
         }
     }
 
+    /**
+     * Creates a url to be used to fetch information about the subreddit.
+     */
     public function url(): string
     {
         $url = sprintf(self::URL, $this->subreddit, $this->sort);

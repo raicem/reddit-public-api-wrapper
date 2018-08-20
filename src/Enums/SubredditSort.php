@@ -10,6 +10,10 @@ final class SubredditSort
     public const TOP = 'top';
     public const RISING = 'rising';
 
+    /**
+     * Determines if the give value is a valid SubredditSort value. It uses
+     * ReflectionClass to get the classes constant values.
+     */
     public static function isValid(string $parameter): bool
     {
         $constants = (new \ReflectionClass(self::class))->getConstants();

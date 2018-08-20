@@ -11,6 +11,10 @@ final class SubredditSortTime
     public const YEAR = 'year';
     public const ALL = 'all';
 
+    /**
+     * Determines if the give value is a valid SubredditSort value. It uses
+     * ReflectionClass to get the classes constant values.
+     */
     public static function isValid(string $parameter): bool
     {
         $constants = (new \ReflectionClass(self::class))->getConstants();
