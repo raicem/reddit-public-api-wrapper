@@ -9,7 +9,10 @@
             "email": "unalancem@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "7.*",
+        "ext-curl": "*"
+    },
     "autoload": {
         "psr-4": {
             "RedditWrapper\\": "src",
