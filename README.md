@@ -10,7 +10,7 @@ This is a very simple wrapper to easily access subreddit and user data.
 Install it as a dependency using [Composer](https://getcomposer.org/)
 
 ```bash
-composer require raicem/reddit-wrapper
+composer require raicem/reddit-public-api-wrapper
 ```
 
 ### 2. Instantiate
@@ -25,7 +25,7 @@ $wrapper = new Wrapper(new WrapperClient());
 
 ### 3. Queries
 #### 3.1 Subreddit Query
-Fetches information about certain Subreddit.
+Fetches information about a certain subreddit.
 
 ```php
 
@@ -42,6 +42,7 @@ $response = $wrapper->fetch($query);
 ```
 
 You may add sort options to your query for best, top, rising, controversial posts in a subreddit.
+You may use the constants provided with the `RedditWrapper\Enums\SubredditSort` and `RedditWrapper\Enums\SubredditSortTime`.
 
 ```php
 
@@ -61,7 +62,7 @@ $response = $wrapper->fetch($query);
 
 #### 3.1 User Query
 
-Fetches the feed belonging to the user.
+Fetches the feed belonging to a user.
 
 ```php
 
@@ -75,14 +76,14 @@ $response = $wrapper->fetch($query);
 
 ```
 
-All of the queries extend the `QueryInterface` in the library. So you can implement your own query in your code base and then provide this query to the `Wrapper`.
+All of these queries extends the `QueryInterface` in the package. So you can create your own query implementing `QueryInterface` in your code base and then provide it to the `Wrapper`.
 
 ### 4. Magic Stuff
 #### 4.1 __call method on the Wrapper
 
-I believe the main function of this library to fetch Subreddit information. I wanted to streamline that functionality as much as possible. 
+I believe the main function of this library will be to fetch subreddit information. I wanted to streamline that functionality as much as possible. 
 
-So without creating a new query you can call the Subreddit's name as a method on this wrapper.
+So without creating a new query, you may call the subreddit's name as a method on this wrapper.
 
 ```php
 
@@ -95,7 +96,7 @@ $response = $wrapper->formula1();
 
 ```
 #### 4.2 `fetchSimple` method on Wrapper
-When fetching subreddit information, Reddit sends a lot of information that mostly will not be needed. This can very difficult the get through. fetchSimple method filters certain properties so that you are presented with a cleaner response. 
+When fetching subreddit information, Reddit sends a lot of information that is probaby not neccessery. The default response can very difficult to get through. `fetchSimple` method removes all the clutter and tries to present response with only more general values.
 
 ```php
 
@@ -109,7 +110,7 @@ $response = $wrapper->fetchSimple($query);
 
 ```
 
-`fetchSimple` method returns these values. This method only works for `SubredditQuery`.
+`fetchSimple` method returns these values. This method only works for `SubredditQuery` instances.
 
 | Value        |
 | ------------ |
