@@ -3,7 +3,7 @@ Reddit Public API PHP Wrapper
 
 Reddit provides a very convenient access to its data just by adding `.json` to the end of normal URLs. For example, `https://www.reddit.com/r/formula1.json` will present you the json response.
 
-This is a very simple wrapper to easily access subreddit and user data. 
+This is a very simple wrapper around this feature of Reedit. Thies to grant easy access to subreddit and user data. 
 
 ### 1. Installation
 
