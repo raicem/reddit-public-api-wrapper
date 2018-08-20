@@ -24,7 +24,7 @@ $wrapper = new Wrapper(new WrapperClient());
 ```
 
 ### 3. Queries
-#### 3.1 Subreddit Query
+#### 3.1. Subreddit Query
 Fetches information about a certain subreddit.
 
 ```php
@@ -60,7 +60,7 @@ $response = $wrapper->fetch($query);
 
 ```
 
-#### 3.1 User Query
+#### 3.2. User Query
 
 Fetches the feed belonging to a user.
 
@@ -79,7 +79,7 @@ $response = $wrapper->fetch($query);
 All of these queries extends the `QueryInterface` in the package. So you can create your own query implementing `QueryInterface` in your code base and then provide it to the `Wrapper`.
 
 ### 4. Magic Stuff
-#### 4.1 __call method on the Wrapper
+#### 4.1. __call method on the Wrapper
 
 I believe the main function of this library will be to fetch subreddit information. I wanted to streamline that functionality as much as possible. 
 
@@ -95,7 +95,7 @@ $wrapper = new Wrapper(new WrapperClient());
 $response = $wrapper->formula1();
 
 ```
-#### 4.2 `fetchSimple` method on Wrapper
+#### 4.2. `fetchSimple` method on Wrapper
 When fetching subreddit information, Reddit sends a lot of information that is probaby not neccessery. The default response can very difficult to get through. `fetchSimple` method removes all the clutter and tries to present response with only more general values.
 
 ```php
