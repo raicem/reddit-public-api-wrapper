@@ -1,5 +1,5 @@
 {
-    "name": "raicem/public-reddit-wrapper",
+    "name": "raicem/reddit-public-api-wrapper",
     "description": "A simple wrapper for Reddit's public API",
     "type": "library",
     "license": "MIT",
