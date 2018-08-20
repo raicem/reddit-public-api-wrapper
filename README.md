@@ -94,7 +94,7 @@ $wrapper = new Wrapper(new WrapperClient());
 $response = $wrapper->formula1();
 
 ```
-#### 4.2 `fetchSimple` methon on Wrapper
+#### 4.2 `fetchSimple` method on Wrapper
 When fetching subreddit information, Reddit sends a lot of information that mostly will not be needed. This can very difficult the get through. fetchSimple method filters certain properties so that you are presented with a cleaner response. 
 
 ```php
@@ -109,7 +109,7 @@ $response = $wrapper->fetchSimple($query);
 
 ```
 
-`fetchSimple` method returns these values.
+`fetchSimple` method returns these values. This method only works for `SubredditQuery`.
 
 | Value        |
 | ------------ |
