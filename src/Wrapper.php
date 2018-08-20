@@ -2,6 +2,7 @@
 
 namespace RedditWrapper;
 
+use RedditWrapper\Enums\SubredditSortTime;
 use RedditWrapper\Queries\QueryInterface;
 use RedditWrapper\Queries\SubredditQuery;
 
@@ -30,7 +31,7 @@ class Wrapper
      * This method fetches the subreddit information as usual but then filters
      * some very detailed information.
      */
-    public function fetchSimplified(QueryInterface $query): array
+    public function fetchSimplified(SubredditQuery $query): array
     {
         $response = $this->fetch($query);
 
