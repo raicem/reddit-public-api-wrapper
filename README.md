@@ -1,6 +1,14 @@
 Reddit Public API PHP Wrapper
 ===
 
+> ## ⚠️ This library no longer works
+>
+> Reddit has closed the unauthenticated public `.json` endpoints this library was built on. Requests to URLs like `https://www.reddit.com/r/formula1.json` are now blocked by Reddit's network security and return **HTTP 403** instead of JSON, so every `fetch()` call fails.
+>
+> Reddit's API now requires OAuth authentication. See [Reddit's API documentation](https://github.com/reddit-archive/reddit/wiki/API) for details.
+>
+> This repository is kept for archival purposes only.
+
 Reddit provides a very convenient access to its data just by adding `.json` to the end of normal URLs. For example, `https://www.reddit.com/r/formula1.json` will present you the json response.
 
 This is a very simple wrapper around this feature of Reedit. Thies to grant easy access to subreddit and user data. 
